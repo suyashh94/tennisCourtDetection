@@ -73,7 +73,7 @@ class CourtReference:
         cv2.line(court, *self.right_inner_line, 1, self.line_width)
         cv2.line(court, *self.middle_line, 1, self.line_width)
         court = cv2.dilate(court, np.ones((5, 5), dtype=np.uint8))
-        # plt.imsave('court_configurations/court_reference.png', court, cmap='gray')
+        plt.imsave('court_reference.png', court, cmap='gray')
         self.court = court
         return court
 
